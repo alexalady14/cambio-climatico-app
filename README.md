@@ -3,7 +3,7 @@
 >La generacion de la electricidad 
 >
 >Lluvia de ideas:
->.Ver cuantas baces de de electricidad todavia se generan con combustible de carbón o de gas 
+>.Ver cuantas vases de de electricidad todavia se generan con combustible de carbón o de gas 
 >.Poder tener mas formas de generacion de electricidad eolicas o que no utilicen un combustible no dañino
 >
 
