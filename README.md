@@ -11,6 +11,6 @@
 >chat bot : con listas (contrar imagenes e informacion de esta y su tipo de efecto en el medio ambiente)
 >1.energia eolica
 >2.energia hidraulica
->3.energia a carbon o gas (enegia dañina)
+>3.energia a carbon o gas (energia dañina)
 >
 
