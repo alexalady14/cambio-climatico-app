@@ -45,4 +45,4 @@ async def imagen_energia(ctx):
     imagen_url = 'imagen\hidraulica.jpg'
     await ctx.send(f'Imagen relacionada con la energía eléctrica: {imagen_url}')
 
-bot.run("MTE5NDc3NTAyNDk2ODY2MzA3MQ.G1HzRA.h-134PpQ8otD1kkyU_xvdtzzNwYogCLyAPzAc8")
+bot.run("TOKEN")
