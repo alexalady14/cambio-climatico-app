@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 
@@ -99,15 +100,30 @@ async def e6(ctx):
     )
     await ctx.send(informacion)
 
+# Comando para enviar una imagen predefinida
 
+@bot.command()
+async def mem(ctx):
+    # Lista de nombres de imágenes en la carpeta 'images'
+    nombre_imagenes = os.listdir('images')
 
-@bot.command(name='imagen_energia', help='Muestra una imagen relacionada con la energía eléctrica.')
-async def imagen_energia(ctx):
-    # Puedes proporcionar el enlace a una imagen relacionada con la energía eléctrica
-    imagen_url = 'imagen\nuclear o gas.jpg'
-    imagen_url = 'imagen\eolica.jpg'
-    imagen_url = 'imagen\hidraulica.jpg'
-    imagen_url = 'imagen\carbon.jpeg'
-    await ctx.send(f'Imagen relacionada con la energía eléctrica: {imagen_url}')
+    # Nombre de la imagen predefinida que queremos enviar
+    imagen_predefinida = 'images\carbon o gas.jpg'# Reemplaza con el nombre de tu imagen
+
+    # Verificamos si la imagen predefinida está en la carpeta 'images'
+    if imagen_predefinida in nombre_imagenes:
+        # Construimos la ruta completa de la imagen predefinida 
+        ruta_imagen_predefinida = f'images/{imagen_predefinida}'
+
+        # Abrimos el archivo de la imagen en modo binario ('rb')
+        with open(ruta_imagen_predefinida, 'rb') as f:
+            # Convertimos el archivo en un objeto discord.File
+            picture = discord.File(f)
+
+        # Enviamos la imagen al canal desde el cual se llamó el comando 
+        await ctx.send(file=picture)
+    else:
+    # Si la imagen predefinida no se encuentra, enviamos un mensaje de error 
+     await ctx.send("La imagen predefinida no se encuentra en la carpeta 'images'.")
 
 bot.run("TOKEN")
